@@ -1,0 +1,168 @@
+/* --- CABEÇALHO DA PÁGINA DE EVENTOS --- */
+.page-content {
+    padding: 60px 20px;
+}
+
+.events-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.events-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: var(--pink-primary);
+    margin-bottom: 15px;
+}
+
+.events-header p {
+    font-size: 1.2rem;
+    color: var(--brown-dark);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- CATEGORIAS (Casamento, Aniversário, etc) --- */
+.event-category {
+    margin-bottom: 90px;
+    padding-bottom: 40px;
+    border-bottom: 1px dashed rgba(140, 93, 79, 0.2); /* Linha divisória sutil entre os eventos */
+}
+
+.event-category:last-of-type {
+    border-bottom: none;
+}
+
+.category-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--brown-dark);
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+/* --- BLOCO ZIG-ZAG (Igual à imagem de referência) --- */
+.event-block {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+/* A mágica do Zig-Zag: O segundo bloco de cada categoria inverte de lado automaticamente */
+.event-block:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.event-image {
+    flex: 1; /* Ocupa 50% do espaço */
+}
+
+.event-image img {
+    width: 100%;
+    height: 400px; /* Altura padrão para todas as fotos ficarem alinhadas */
+    object-fit: cover; /* Faz a foto preencher a caixa sem distorcer */
+    border-radius: 20px; /* Bordas arredondadas iguais à sua imagem */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08); /* Sombra elegante */
+    border: 1px solid var(--pink-light); /* Borda clarinha para destacar */
+}
+
+.event-text {
+    flex: 1; /* Ocupa os outros 50% */
+}
+
+.event-text h3 {
+    font-size: 1.1rem;
+    text-transform: uppercase; /* Letra maiúscula para dar ar gourmet/referência */
+    letter-spacing: 2px;
+    color: #b08c80; /* Tom bege/marrom clarinho elegante */
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.event-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--pink-primary);
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.event-text p:last-child {
+    font-size: 1rem;
+    color: var(--brown-dark);
+    line-height: 1.7;
+}
+
+
+/* --- SEÇÃO DO BOTÃO WHATSAPP (Call to Action) --- */
+.event-cta {
+    background-color: var(--white);
+    padding: 60px 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(242, 66, 122, 0.08);
+    border: 1px solid var(--pink-light);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.event-cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--brown-dark);
+    margin-bottom: 15px;
+}
+
+.event-cta p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.btn-whatsapp-large {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: #25D366; 
+    color: #ffffff;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp-large:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px); 
+}
+
+.wa-icon {
+    width: 28px;
+    height: 28px;
+}
+
+
+/* --- RESPONSIVIDADE PARA CELULARES --- */
+@media (max-width: 850px) {
+    .event-block, 
+    .event-block:nth-child(even) {
+        flex-direction: column; /* No celular, empilha um embaixo do outro */
+        gap: 30px;
+        text-align: center;
+    }
+
+    .event-image img {
+        height: 300px;
+    }
+
+    .events-header h1 {
+        font-size: 2.2rem;
+    }
+}
