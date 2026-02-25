@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Página Inicial (Representa o seu index.html) -->
+  <url>
+    <loc>https://neia-doces.netlify.app/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- Cardápio -->
+  <url>
+    <loc>https://neia-doces.netlify.app/cardapio.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Eventos -->
+  <url>
+    <loc>https://neia-doces.netlify.app/eventos.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
